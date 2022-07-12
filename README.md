@@ -17,6 +17,9 @@ limitations under the License.
 
 Welcome to Apache Mahout!
 ===========
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
+
 The goal of the Apache Mahout™ project is to build an environment for quickly creating scalable, performant machine learning applications.
 
 For additional information about Mahout, visit the [Mahout Home Page](http://mahout.apache.org/)
