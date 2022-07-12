@@ -4,7 +4,7 @@
 
 tasks:
   - init: mvn -DskipTests clean install
-    command: |
+  - command: |
       java -version # Tested with JDK 11.0.15
       sdk install groovy # tested with Groovy v4.0.3 & v3.0.7
       groovy -version # make sure Groovy >= 3.x
