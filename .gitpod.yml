@@ -5,12 +5,11 @@
 tasks:
   - init: |
       mvn -Drat.skip -DskipTests clean install
-    command: |
-      groovy -cp $(ls distribution/target/apache-mahout-*/lib/mahout-core-*.jar) demo2.groovy # this will run a simple hilbert matrix test case
-  - command: |
-      java -version # Tested with JDK 11.0.15
-      sdk install groovy # tested with Groovy v4.0.3 & v3.0.7
-      groovy -version # make sure Groovy >= 3.x
+      java -version # Make sure JDK >= 11.0.15
+      sdk install groovy # Install Groovy (Tested with: v4.0.3 & v3.0.7)
+      groovy -version # Make sure Groovy >= 3.x
       wget http://files.grouplens.org/datasets/movielens/ml-100k.zip # download the movie dataset
-      unzip ml-100k.zip # unzip the content of the dataset
-      groovy demo.groovy # run the demo (then you should see `(8) Stalingrad (1993)` at the end of the list)
+      unzip -n ml-100k.zip # unzip the content of the dataset (skip if already exists)
+    command: |
+      groovy -cp $(ls distribution/target/apache-mahout-*/lib/mahout-core-*.jar) demo_lastest.groovy # this will run a simple hilbert matrix test case
+      groovy demo_v9.groovy # run the demo (then you should see `(8) Stalingrad (1993)` at the end of the list)
