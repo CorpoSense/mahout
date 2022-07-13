@@ -3,7 +3,10 @@
 # and commit this file to your remote git repository to share the goodness with others.
 
 tasks:
-  - init: mvn -DskipTests clean install
+  - init: |
+      mvn -Drat.skip -DskipTests clean install
+    command: |
+      groovy -cp $(ls distribution/target/apache-mahout-*/lib/mahout-core-*.jar) demo2.groovy # this will run a simple hilbert matrix test case
   - command: |
       java -version # Tested with JDK 11.0.15
       sdk install groovy # tested with Groovy v4.0.3 & v3.0.7

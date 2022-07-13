@@ -1,4 +1,4 @@
-@Grab(group = 'org.apache.mahout', module = 'mahout-core', version = '0.9')
+@Grab('org.apache.mahout:mahout-core:0.9')
 
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap
 import org.apache.mahout.cf.taste.impl.common.FastIDSet
